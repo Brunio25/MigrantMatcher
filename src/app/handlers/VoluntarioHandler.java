@@ -42,10 +42,10 @@ public class VoluntarioHandler {
     }
 
 
-    public void indicarCodigo(String codigo, CatalogoVoluntarios catVoluntario, AddBy addBy) {
+    public void indicarCodigo(String codigo, CatalogoVoluntarios catVoluntario) {
         if (this.codigo.equals(codigo)) {
             catVoluntario.addVoluntario(this.voluntario);
-            catalogoAjuda.addAjuda(ajuda, voluntario, addBy);
+            catalogoAjuda.addAjuda(ajuda, voluntario);
         }
     }
 

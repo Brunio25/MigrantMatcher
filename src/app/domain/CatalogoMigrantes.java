@@ -7,7 +7,7 @@ public class CatalogoMigrantes {
     private static List<Migrante> migrantesCatalogo;
     private static CatalogoMigrantes instance;
 
-    public CatalogoMigrantes getInstance() {
+    public static CatalogoMigrantes getInstance() {
         if (instance == null) {
             instance = new CatalogoMigrantes();
         }

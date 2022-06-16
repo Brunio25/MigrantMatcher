@@ -10,6 +10,7 @@ public class CatalogoAjudas {
     private static HashMap<Ajuda, Voluntario> ajudasCatalogo;
     private static CatalogoAjudas instance;
     private static List<Ajuda> ajudas;
+    private static AddBy addBy;
 
     public static CatalogoAjudas getInstance() {
         if (instance == null) {
@@ -24,7 +25,11 @@ public class CatalogoAjudas {
         ajudas = new ArrayList<>();
     }
 
-    public void addAjuda(Ajuda ajuda, Voluntario voluntario, AddBy addBy) {
+    public void setAddBy(AddBy a) {
+        addBy = a;
+    }
+
+    public void addAjuda(Ajuda ajuda, Voluntario voluntario) {
         ajudasCatalogo.put(ajuda, voluntario);
         ajudas = addBy.add(ajuda, ajudas);
     }
