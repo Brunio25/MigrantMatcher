@@ -1,20 +1,21 @@
-package src;
+package app.domain;
 
 /**
  * Alojamento
  */
-public class Alojamento extends Ajuda {
+public class Alojamento implements Ajuda {
     private final int nrPessoas;
     private Regiao regiao;
 
     public Alojamento(int nrPessoas) {
-        super();
         this.nrPessoas = nrPessoas;
     }
 
-    private void setRegiao(int id, CatalogoRegioes catalogoRegioes) {
-
+    public void setRegiao(int id, CatalogoRegioes catalogoRegioes) {
         this.regiao = catalogoRegioes.getByID(id);
     }
     
+    public Regiao getRegiao() {
+        return regiao;
+    }
 }

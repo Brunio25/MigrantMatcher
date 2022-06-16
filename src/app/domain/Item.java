@@ -1,10 +1,9 @@
-package src;
+package app.domain;
 
-public class Item extends Ajuda{
+public class Item implements Ajuda {
     private final String descricao;
 
     public Item(String descricao) {
-        super();
         this.descricao = descricao;
     }
 }

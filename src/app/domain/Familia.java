@@ -1,4 +1,4 @@
-package src;
+package app.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,10 @@ import java.util.List;
 public class Familia extends Migrante {
     private final int numeroDePessoas;
     private final List<String> nomes;
-    private String contacto;
-    
-
 
     public Familia(int nrPessoas) {
         super();
+
         this.nomes = new ArrayList<>();
         this.numeroDePessoas = nrPessoas;
     }
@@ -22,6 +20,8 @@ public class Familia extends Migrante {
     }
 
     public void setNome(String nome) {
-        this.nomes.add(nome);
+        if (this.nomes.size() < this.numeroDePessoas) {
+            this.nomes.add(nome);
+        }
     }
 }

@@ -1,4 +1,4 @@
-package src;
+package app.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,6 @@ public class CatalogoRegioes {
     }
     
     private CatalogoRegioes() {
-
         this.regioes = new ArrayList<>();
 
         for (Regioes nomeRegiao : Regioes.values()) {
@@ -27,11 +26,15 @@ public class CatalogoRegioes {
           }
     }
 
-    private List<Regiao> getRegioes() {
+    public List<Regiao> getRegioes() {
         return regioes;
     }
 
     public Regiao getByID(int id) {
         return this.regioes.get(id);
+    }
+
+    public boolean isRegiao(int id) {
+        return id >= 0 && id < regioes.size();
     }
 }
