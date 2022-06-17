@@ -1,14 +1,15 @@
 package app.domain;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Migrante
  */
 public class Migrante {
     protected String contacto;
     protected List<Ajuda> ajudas = new ArrayList<>();
-    
+
     public void setAjudasMigrante(Ajuda ajuda) {
         ajudas.add(ajuda);
     }

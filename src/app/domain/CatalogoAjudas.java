@@ -49,8 +49,7 @@ public class CatalogoAjudas {
                 if (alojamento.getRegiao().equals(regiao)) {
                     ajudasRegiao.add(ajuda);
                 }
-            }
-            else {
+            } else {
                 ajudasRegiao.add(ajuda);
             }
         }

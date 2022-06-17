@@ -11,13 +11,13 @@ public class CatalogoRegioes {
     private static CatalogoRegioes instance;
 
     public static CatalogoRegioes getInstance() {
-            if (instance == null) {
-                instance = new CatalogoRegioes();
-            }
+        if (instance == null) {
+            instance = new CatalogoRegioes();
+        }
 
-            return instance;
+        return instance;
     }
-    
+
     private CatalogoRegioes() {
         this.regioes = new ArrayList<>();
 

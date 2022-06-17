@@ -6,7 +6,7 @@ package app.domain;
 public class Regiao {
     private final String nome;
 
-    public Regiao (String nome) {
+    public Regiao(String nome) {
         this.nome = nome;
     }
 

@@ -5,7 +5,7 @@ package app.domain;
  */
 public class Voluntario {
     private final String contacto;
-    
+
     public Voluntario(String contacto) {
         this.contacto = contacto;
     }

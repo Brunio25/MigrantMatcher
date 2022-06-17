@@ -19,7 +19,11 @@ public class CatalogoMigrantes {
         migrantesCatalogo = new ArrayList<>();
     }
 
-    public void addMigrante(Migrante migrante){
+    public void addMigrante(Migrante migrante) {
         migrantesCatalogo.add(migrante);
+    }
+
+    public int nrMigrantes() {
+        return migrantesCatalogo.size();
     }
 }

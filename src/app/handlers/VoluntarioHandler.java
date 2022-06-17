@@ -1,7 +1,6 @@
 package app.handlers;
 
 import app.domain.*;
-import app.strategies.AddBy;
 import com.pidgeonsmssender.sdk.PidgeonSMSSender;
 
 import java.util.List;
@@ -16,6 +15,7 @@ public class VoluntarioHandler {
 
     public VoluntarioHandler(String contacto) {
         this.voluntario = new Voluntario(contacto);
+        this.catalogoAjuda = CatalogoAjudas.getInstance();
     }
 
     public List<Regiao> indicarNrPessoas(int nrPessoas) {
@@ -24,9 +24,9 @@ public class VoluntarioHandler {
         return CatalogoRegioes.getInstance().getRegioes();
     }
 
-    public boolean indicarRegiao(Alojamento alojamento, int id, CatalogoRegioes catRegioes) {
-        if(catRegioes.isRegiao(id)) {
-            alojamento.setRegiao(id, catRegioes);
+    public boolean indicarRegiao(int id, CatalogoRegioes catRegioes) {
+        if (catRegioes.isRegiao(id) && ajuda instanceof Alojamento) {
+            ((Alojamento) ajuda).setRegiao(id, catRegioes);
 
             enviarSms();
             return true;

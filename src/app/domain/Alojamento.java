@@ -14,7 +14,7 @@ public class Alojamento implements Ajuda {
     public void setRegiao(int id, CatalogoRegioes catalogoRegioes) {
         this.regiao = catalogoRegioes.getByID(id);
     }
-    
+
     public Regiao getRegiao() {
         return regiao;
     }

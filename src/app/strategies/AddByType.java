@@ -12,10 +12,9 @@ public class AddByType implements AddBy {
     @Override
     public List<Ajuda> add(Ajuda ajuda, List<Ajuda> ajudas) {
 
-        if (ajuda instanceof  Alojamento) {
+        if (ajuda instanceof Alojamento) {
             ajudas.add(0, ajuda);
-        }
-        else {
+        } else {
             ajudas.add(ajuda);
         }
 

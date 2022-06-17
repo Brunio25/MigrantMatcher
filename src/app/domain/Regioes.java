@@ -1,6 +1,6 @@
 package app.domain;
 
-enum Regioes {
+public enum Regioes {
     AVEIRO,
     BEJA,
     BRAGA,

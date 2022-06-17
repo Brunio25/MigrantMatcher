@@ -65,4 +65,13 @@ public class MigrantMatcher {
             return new AddByAsc();
         }
     }
+
+    private boolean telefoneValido(String contacto) {
+        String trimmedContacto = contacto.trim();
+        if (trimmedContacto.length() != 9) {
+            return false;
+        }
+
+        return trimmedContacto.matches("[9][0-9]{8}");
+    }
 }

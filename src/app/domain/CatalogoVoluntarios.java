@@ -11,13 +11,13 @@ public class CatalogoVoluntarios {
     private static CatalogoVoluntarios instance;
 
     public static CatalogoVoluntarios getInstance() {
-            if (instance == null) {
-                instance = new CatalogoVoluntarios();
-            }
+        if (instance == null) {
+            instance = new CatalogoVoluntarios();
+        }
 
-            return instance;
+        return instance;
     }
-    
+
     private CatalogoVoluntarios() {
         voluntarios = new ArrayList<>();
     }
